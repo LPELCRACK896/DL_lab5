@@ -69,31 +69,26 @@ def build_gan(generator, discriminator):
 - Compilar el modelo de la GAN (con el Discriminador congelado).
 3. Ejecución:
 
-Entrenar el Discriminador y el Generador en un bucle, alternando entre ellos.
-python
-Copy code
+- Entrenar el Discriminador y el Generador en un bucle, alternando entre ellos.
+
+```python
 epochs = 20000
 batch_size = 64
 half_batch = batch_size // 2
 
 for epoch in range(epochs):
-    # Entrenar el Discriminador y el Generador aquí...
-Visualización del Progreso
+
+```
+## Visualización del Progreso
 En cada época, o después de un número específico de épocas, imprime las pérdidas y la precisión del Discriminador y del Generador.
 
-python
-Copy code
+
+```python
 if epoch % 1000 == 0:
     print(f"{epoch} [D loss: {d_loss[0]} | D accuracy: {100*d_loss[1]}] [G loss: {g_loss}]")
-Próximos Pasos
-Añadir funciones para visualizar o guardar las imágenes generadas.
-Realizar ajustes y optimizaciones en los modelos y parámetros de entrenamiento para mejorar los resultados.
-Experimentar con diferentes arquitecturas de red, funciones de pérdida, y optimizadores.
-Este Markdown ofrece un resumen y la estructura básica de cómo construir y entrenar una GAN con TensorFlow y Keras para el dataset MNIST, sirviendo como punto de partida para exploraciones y mejoras adicionales.
 
-
-
-
-
-
-Regenerate
+```
+## Próximos Pasos
+- Añadir funciones para visualizar o guardar las imágenes generadas.
+- Realizar ajustes y optimizaciones en los modelos y parámetros de entrenamiento para mejorar los resultados.
+- Experimentar con diferentes arquitecturas de red, funciones de pérdida, y optimizadores.
